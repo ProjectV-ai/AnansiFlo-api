@@ -1,3 +1,11 @@
+"""
+Anansiflo API: A Flask mock backend for blockchain wallet authorization.
+- Use as-is for testing (mocked by default: USE_MOCK_BLOCKCHAIN=True).
+- Set USE_MOCK_BLOCKCHAIN=False and add .env for real Ethereum calls.
+- Default API keys: admin123 (admin), user456 (user).
+- Endpoints: /health, /api/auth (POST with X-API-Key header).
+- Requires: flask, python-dotenv, web3, flask-limiter.
+"""
 from flask import Flask, jsonify, request
 from dotenv import load_dotenv
 import os
